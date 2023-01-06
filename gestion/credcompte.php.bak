@@ -1,0 +1,156 @@
+<?php
+
+
+
+session_start();
+
+if (!$_SESSION['perso_iduser']){
+
+    die();
+
+}
+
+
+
+?>
+
+
+
+<html>
+
+<head>
+
+<title> Cr�diter un compte </title>
+
+<head>
+
+<body>
+
+
+
+<?php
+
+
+
+  include("../include/config.php");
+
+
+
+  $idcpte = mysqli_real_escape_string($conn, addslashes(trim($_POST['idcpte'])));
+
+  $cred = mysqli_real_escape_string($conn, addslashes(trim($_POST['cred'])));
+
+
+
+  @mysql_connect($host,$user,$pass) or die("<br>0- Impossible de se connecter � la base de donn�es -- "); // Le @ ordonne a php de ne pas afficher de message d'erreur
+
+  @mysqli_select_db($conn, $bdd) or die("<br>0- Impossible de se connecter � la base de donn�es -- ");
+
+
+
+  $idjoueur = $_SESSION['perso_iduser'];
+
+
+
+  $sql = "SELECT iduser,emaileco FROM eco_user,eco_pays ";
+
+  $sql .= "WHERE iduser = '$idjoueur' AND eco_user.idpays = eco_pays.idpays ;";
+
+  $res = @mysqli_query($conn, $sql)or die("<br> Vous n'�xistez pas !!!");
+
+  $num = @mysqli_num_rows($res) or die("<br> Vous n'�xistez pas d�sol� !!!");
+
+  $produit = mysqli_fetch_array($res);
+
+  $fct_mes_resp_emaileco = $produit['emaileco'];
+
+
+
+  // CTRL Autorisation
+
+  if ($_SESSION['perso_droituser'] != '999')
+
+  {
+
+	  $paysjoueur = $_SESSION['perso_idpays'];
+
+	  $autojoueur = substr($_SESSION['perso_droituser'],1,1);
+
+	  if ($autojoueur < '5')
+
+	  	die("<br> PB de v�rification1, d�sol� !!!");
+
+	}
+
+
+
+      // Recherche info du compte destinataire
+
+      $sql = "SELECT devise,solde FROM eco_banque WHERE idcompte = '$idcpte';";
+
+      $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te de recherche du compte (cr�dit) !!!");
+
+      $num = @mysqli_num_rows($res) or die("<br> Pas de compte (cr�dit) !!!");
+
+      $produit = mysqli_fetch_array($res);
+
+
+
+      $deviseA = $produit['devise'];
+
+      $soldeA = $produit['solde'];
+
+
+
+      $newsoldeA = $soldeA + $cred;
+
+
+
+      $com = "Cr�dit administratif...";
+
+
+
+  $fct_mes_resp_type = 'C';
+
+  $fct_mes_resp_ncpte = $idcpte;
+
+  $fct_mes_resp_montant = $cred;
+
+  $fct_mes_resp_devise = $deviseA;
+
+
+
+        // Transaction d�bitrice
+
+        $sql = "INSERT INTO eco_mvtbanque (idmvt,idcompte,idcompteaux,montant,devise,commentaire,dateheure) VALUES (NULL,'$idcpte','999999','$cred','$deviseA','$com',NOW());";
+
+        $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te mvt (cr�dit) !!!");
+
+
+
+        // M�j solde d�bit�
+
+        $sql = "UPDATE eco_banque SET solde = '$newsoldeA' WHERE idcompte = '$idcpte';";
+
+        $res = @mysqli_query($conn, $sql) or die("<br> PB de m�j le solde (cr�dit)");
+
+
+
+  // Envoi du message
+
+  include("../include/fct_mes_resp.php");
+
+
+
+  echo "<script language=\"JavaScript\"> document.location.replace(\"../info_cpte.php\");</script>";
+
+
+
+?>
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,36 @@
+<?php
+  // Envoi du message : Entreprise
+
+// $fct_mes_entre_type
+// $fct_mes_entre_entreprise
+// $fct_mes_entre_emaileco
+
+  $email = $fct_mes_entre_emaileco . "@googlegroups.com";
+
+  $sujet = "EcoMicro - Entreprise : ";
+  $sujet .= $fct_mes_entre_entreprise;
+
+if ($fct_mes_entre_type == "N")
+{
+    $corps = "L'entreprise : ";
+    $corps .= $fct_mes_entre_entreprise;
+    $corps .= ", vient d'�tre cr��e.";
+}
+else if ($fct_mes_entre_type == "M")
+{
+    $corps = "L'entreprise : ";
+    $corps .= $fct_mes_entre_entreprise;
+    $corps .= ", vient d'�tre modifi�e.";
+}
+
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+  $corps .= "\n\n";
+//  $corps .= $fct_mes_entre_type;
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+?>

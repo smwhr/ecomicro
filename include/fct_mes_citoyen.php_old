@@ -1,0 +1,60 @@
+<?php
+  // Envoi du message : Citoyen
+
+// $fct_mes_citoyen_type
+// $fct_mes_citoyen_nom                    INACTIF   NEW
+// $fct_mes_citoyen_login                  NEW
+// $fct_mes_citoyen_email                  INACTIF   NEW
+// $fct_mes_citoyen_emaileco               INACTIF   NEW
+
+
+  $email = $fct_mes_citoyen_emaileco . "@googlegroups.com";
+
+  $sujet = "EcoMicro - Citoyen : ";
+  $sujet .= $fct_mes_citoyen_nom;
+
+  if ($fct_mes_citoyen_type == 'NEW')
+  {
+    $corps = "Un nouveau citoyen vient d'�tre enregistr� : ";
+    $corps .= $fct_mes_citoyen_nom;
+    $corps .= "\nEmail : ";
+    $corps .= $fct_mes_citoyen_email;
+  }
+
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+  $corps .= "\n\n";
+//  $corps .= $fct_mes_citoyen_type;
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+  // email au joueur
+  $email = $fct_mes_citoyen_email;
+
+  if ($fct_mes_citoyen_type == 'NEW')
+  {
+    $sujet = "EcoMicro - Enregistrement : ";
+    $sujet .= $fct_mes_citoyen_nom;
+
+      $corps = "Bonjour ";
+      $corps .= $fct_mes_citoyen_nom;
+      $corps .= ",\n\n";
+      $corps .= "Vous venez d'�tre enregistr�(e) sur le syst�me �conomique EcoMicro. Votre Login est : ";
+      $corps .= $fct_mes_citoyen_login;
+      $corps .= ".\nPour obtenir votre mot de passe allez sur le site, sur un �cran quelconque, et cliquez sur le bouton correspondant.";
+  }
+
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+  $corps .= "\n\n";
+//  $corps .= $fct_mes_citoyen_type;
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+?>

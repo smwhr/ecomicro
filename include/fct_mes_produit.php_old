@@ -1,0 +1,31 @@
+<?php
+  // Envoi du message : Responsable
+
+// $fct_mes_prod_type
+// $fct_mes_prod_produit
+// $fct_mes_prod_entreprise
+// $fct_mes_prod_emaileco
+
+  $email = $fct_mes_prod_emaileco . "@googlegroups.com";
+
+  $sujet = "EcoMicro - Produit : ";
+  $sujet .= $fct_mes_prod_entreprise;
+
+    $corps = "L'entreprise : ";
+    $corps .= $fct_mes_prod_entreprise;
+    $corps .= ", vient de mettre en vente ou de modifier le produit : ";
+    $corps .= $fct_mes_prod_produit;
+    $corps .= ".";
+
+
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+  $corps .= "\n\n";
+//  $corps .= $fct_mes_prod_type;
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+?>

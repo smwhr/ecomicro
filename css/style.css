@@ -1,0 +1,126 @@
+/* 
+    Document   : style
+    Created on : 4 juin 2013, 19:35:32
+    Author     : Yoann
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+body {
+    color:          black; 
+    font-family:    'Verdana'; 
+    font-size:      10pt;
+}
+
+a           { font-weight:bold; color:green; text-decoration: none; }
+a:hover     { font-weight:bold; color:blue; text-decoration: underline overline; }
+
+a.textLogo       { font-size: 9pt; text-decoration: none; }
+a.textLogo:hover { font-size: 9pt; text-decoration: none !important; }
+
+.textMinus  { font-size: 8pt; }
+.textPetit  { font-size: 9pt; }
+.textNormal { font-size: 10pt; }
+.textGros   { font-size: 15pt; }
+
+.textGras   { font-weight:bold; } 
+
+.textCenter { text-align:center; }
+
+.textBleu   { color:blue; }
+.textNoir   { color:black; }
+.textRouge  { color:red; }
+.textBlanc  { color:white; }
+
+.fondBleu   { background-color:#87CEFA; }
+.fondClair  { background-color:#F0F0F0; }
+.fondBlanc  { background-color:#FFFFFF; }
+
+.ombre      { box-shadow: 3px 3px 5px #aaa; }
+
+.rond       { border-radius:10px; }
+.rondFaible { border-radius:3px; }
+
+.scroll-1   { height:500px; overflow:auto; }
+
+.tr1        { background-color:#C9E8FF; border-bottom:1; height:25px; }
+.tr2        { background-color:#FAFAFA; border-bottom:1; height:25px; }
+
+.padding2   { padding:2px 2px; }
+.padding    { padding:5px 5px; }
+
+.margin5    { margin:5px 5px; }
+.margin15   { margin:15px 15px; }
+
+.tailleSimple { height:30px; line-height:30px; }
+.tailleDouble { height:73px; line-height:73px; }
+
+.boutonVert         { background-color:#77E253; }
+.boutonVert:hover   { background-color:#3BE000; }
+.boutonOrange       { background-color:#FFBD3A; }
+.boutonOrange:hover { background-color:#FFA500; }
+.boutonMarron       { background-color:#E24736; }
+.boutonMarron:hover { background-color:#E01200; }
+.boutonRouge        { background-color:#BDB76B; }
+.boutonRouge:hover  { background-color:#B8860B; }
+.boutonBlanc        { background-color:#F0F0F0; }
+.boutonBlanc:hover  { background-color:#FFFFFF; }
+.boutonBleu         { background-color:#47B2FF; }
+.boutonBleu:hover   { background-color:#258FDB; }
+/*443AFF - 0C00FF*/
+.menuAccueil        { margin:5px 5px; font-size: 13pt; font-weight:bold; text-align:center; }
+.menuIndex          { margin:5px 5px; font-size: 10pt; font-weight:bold; text-align:center; }
+.menuAide           { margin:5px 5px; font-weight:bold; text-align:center; }
+.menuEtat           { margin:5px 5px; font-size: 10pt; font-weight:bold; text-align:center; }
+.menuEntreprise     { margin:5px 5px; font-size: 10pt; font-weight:bold; text-align:center; }
+
+.cadrePrincipal     { margin:5px 0px; box-shadow: 3px 3px 5px #aaa; padding:5px 5px; background-color:#FAFAFA; border-width: 3px; border-color: white; border-style: solid;}
+
+.cadreClair         { margin:5px 0px; box-shadow: 3px 3px 5px #aaa; padding:5px 5px; background-color:#FAFAFA; border-width: 3px; border-color: white; border-style: solid;}
+
+.infoUser           { height:130px; line-height:130px;}
+
+.direction          { background-color:#1E90FF; border-radius:3px; height:45px; display:table; text-align:center; width:170px; }
+.direction:hover    { background-color:#00BFFF; border-radius:3px; height:45px; display:table; text-align:center; width:170px; }
+.textDirection      { vertical-align:middle; display:table-cell; text-align:center; color:black; font-family:'Arial'; font-size:10pt; font-weight:bold; }
+
+.relativeCpte   { position:relative; right:200px; z-index: 1000; width:470px; }
+.positionCpte   { float: right; }
+.Cpte           { width:340px; height:25px;}
+
+.msgDetail { color:black; font-family:'Arial'; font-size:13pt; margin:15px 15px; }
+.msgLst { color:black; font-family:'Arial'; font-size:9pt; font-weight:normal; }
+.msgLst:hover { color:blue; font-family:'Arial'; font-size:9pt; font-weight:bold; text-decoration: underline overline; }
+
+
+#loading-mask{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index:20000;
+    opacity: 0.7;
+    background-color:white;
+}
+#loading{
+    position:absolute;
+    left:40%;
+    top:40%;
+    padding:2px;
+    z-index:20001;
+    height:auto;
+    width:250px;
+}
+#loading a { color:#225588; }
+#loading .loading-indicator{
+    background:white;
+    color:#444;
+    font:bold 13px tahoma,arial,helvetica;
+    padding:10px;
+    margin:0;
+    height:auto;
+}
+#loading-titre { font: normal 20px arial,tahoma,sans-serif;}
+#loading-msg { font: normal 10px arial,tahoma,sans-serif;}

@@ -1,0 +1,1 @@
+<?session_start();$_SESSION = array();session_destroy();?><html><head><title> Fin de session </title><head><body><?  echo "<script language=\"JavaScript\"> document.location.replace(\"../index.php\");</script>";?></body></html>

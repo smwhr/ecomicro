@@ -1,0 +1,26 @@
+<?php
+  // Envoi du message : Vente
+
+// $fct_mes_vente_libtype_prod = libell� du type de produit
+// $fct_mes_vente_texte = texte de la proposition
+// $fct_mes_vente_emaileco
+
+  $email = $fct_mes_vente_emaileco . "@googlegroups.com";
+
+  $sujet = "EcoMicro - Vente : ";
+  $sujet .= $fct_mes_vente_libtype_prod;
+
+  $corps = "Une nouvelle vente vient d'�tre accept�e sur EcoMicro !";
+  $corps .= "\n\n";
+  $corps .= "Ci dessous, le texte de la proposition :";
+  $corps .= "\n\n";
+  $corps .= $fct_mes_vente_texte;
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+?>

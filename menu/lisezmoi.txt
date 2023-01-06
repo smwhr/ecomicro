@@ -1,0 +1,141 @@
+*************************************************************************************
+                                   AIRWICK MENU 2.7
+                                          -
+                                      19.07.2002
+*************************************************************************************
+
+-------------------------------------------------------------------------------------
+ DESCRIPTION
+-------------------------------------------------------------------------------------
+        Airwick Menu est un script à inclure dans un script PHP, celui-ci permet de
+        générer un menu type application windows, horizontal et déroulant. Ce script
+	utilise le PHP, l'HTML, le JavaScript et le DHTML (calques, CSS...)
+
+-------------------------------------------------------------------------------------
+ POINTS FORTS
+-------------------------------------------------------------------------------------
+	+ Reproduit le menu Windows : ergonomie garantie !
+	+ Compatible avec la plupart des navigateurs, saufs options spéciales
+	+ Stockage des menu dans une base de données
+	+ Administration simple
+
+-------------------------------------------------------------------------------------
+ AMELIORATIONS
+-------------------------------------------------------------------------------------
+	+ Version 0.2.6 (10.10.2001) -> 2.7 (19.07.2002)
+		- Changement de système de version : on enlève le 0 !
+
+		- Le script d'administration des menus a été amélioré.
+		  Vous pouvez désormais changer l'ordre des sous-menus après leur
+		  création. 			
+	
+	+ Version 0.2.5 (23.09.2001) -> 0.2.6 (10.10.2001) (La version 1 pointe son
+	  nez !!!)
+
+		- Ajout d'un effet d'affichage. Désormais, les menus développés 
+		  disparaissent automatiquement sans clic droit de la souris :
+		  demande formulée sur www.phpscripts-fr.net par "ledestinetvous"
+		  le 29.09.01.
+
+		- Amélioration du script d'administration : présentation plus claire
+		  et plus conviviale.
+
+	+ Version 0.2.4 (20.08.2001) -> 0.2.5 (23.09.2001)
+
+		- Résolution d'un bug d'affichage (fouilli d'affichage dans les sous-
+		  menus), remarque faite sur www.phpscripts-fr.net par
+		  "ledestinetvous" le 17.09.2001.
+
+		- Ajout d'un nouveau champ : vous pouvez désormais préciser la
+		  fenêtre d'ouverture du lien, demande formulée par Christophe le 
+		  19.09.2001
+
+	+ Version 0.1 (12.07.2001) -> 0.2 (17.08.2001)
+
+		- Résolution du bug d'incompatibilité avec Netscape
+
+		- Création d'un script d'administration plus convivial
+
+-------------------------------------------------------------------------------------
+ CONFIGURATION REQUISE
+-------------------------------------------------------------------------------------
+	- Serveur d'application supportant le PHP (testé sur 4.05)
+	- Serveur MySql (Testé sur MySql 3.23.32)
+
+-------------------------------------------------------------------------------------
+ MISE A JOUR
+-------------------------------------------------------------------------------------
+
+	1 - Executer éventuellement les commandes SQL du fichier
+	    maj-x.x.x-x.x.x-sql.txt sous une console MySql ou PHPMyAdmin.
+	2 - Remplacer ou ajoutez les fichiers suivants :
+		
+		- config_menu.php (Attention à vos anciens paramètres !!!)
+		- admin_menu.php
+		- airwick_menu.php
+		- barre01.gif
+		- barre02.gif
+		- barre04.gif
+		- plus01.gif
+		- plus05.gif
+		- plus06.gif
+		
+
+	3 - Executez le script admin_menu.php et effectuez eventuellement des
+	    modifications.
+	4 - CLIQUEZ SUR LE BOUTON GENERER DU SCRIPT D'ADMINISTRATION !
+
+-------------------------------------------------------------------------------------
+ INSTALLATION
+-------------------------------------------------------------------------------------
+
+	1 - Créez les tables selon le shéma du fichier tables-sql.txt.
+	2 - Il y a déjà des données d'exemple, vous pouvez les enlever
+	    si vous le désirez.
+	3 - Changer l'accès à la base de données dans le fichier config_menu.php
+	4 - Changez les couleurs, la police... grâce au fichier config_menu.php
+	    Si vous changez les paramètres de position du menu, veuillez éxecuter
+	    la admin_menu.php et cliquer sur le bouton 'Génerer'
+	5 - Créez vos menu grâce au fichier admin_menu.php, n'oubliez pas d'en 
+	    restreindre l'accés !!!
+	6 - Insérez ce code grâce à la fonction PHP "include". Attention ! Ce
+	    script doit s'insèrer dans le corps de la page HTML : entre les
+	    balises <BODY> et </BODY>
+-------------------------------------------------------------------------------------
+ BUGS
+-------------------------------------------------------------------------------------
+	Ayant développé ce script pour mes propres besoins, il est possible qu'il ne
+	convienne pas aux votres, en conséquence n'hésitez pas à me contacter à
+	l'adresse suivante : pascal.manon@caramail.com.
+
+
+-------------------------------------------------------------------------------------
+ LISTE DES FICHIERS
+-------------------------------------------------------------------------------------
+	- licence.txt
+	- lisezmoi.txt
+	- tables-sql.txt
+	- barre01.gif
+	- barre02.gif
+	- barre04.gif
+	- plus01.gif
+	- plus05.gif
+	- plus06.gif
+	- admin_menu.php
+	- airwick_menu.php
+	- config_menu.php
+	- exemple.php
+
+-------------------------------------------------------------------------------------
+ REMERCIEMENTS
+-------------------------------------------------------------------------------------
+	Je remercie toutes les personnes qui m'on donné leur avis, notamment celles
+	qui permettent à ce script de progresser.
+
+	Désormais, il a dépassé le cadre de mes besoins personnels. C'est pourquoi
+	n'hésitez pas à le modifier et à l'améliorer...
+
+-------------------------------------------------------------------------------------
+ PASCAL, CLAUDE MANON
+ pascal.manon@caramail.com
+

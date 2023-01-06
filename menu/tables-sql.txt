@@ -1,0 +1,39 @@
+# Script SQL à insérer dans une base MySql
+# N'oubliez pas de modifier les paramètre de connection mysql
+# dans le fichier config_menu.php
+
+# Structure de la table 'airwick_menu'
+#
+
+CREATE TABLE airwick_menu (
+   id_menu int(10) unsigned NOT NULL auto_increment,
+   id_node_menu int(10) unsigned DEFAULT '0' NOT NULL,
+   titre_menu text NOT NULL,
+   lien_menu text NOT NULL,
+   pos_x int(11) DEFAULT '0' NOT NULL,
+   pos_y int(11) DEFAULT '0' NOT NULL,
+   cible_menu text,
+   PRIMARY KEY (id_menu),
+   KEY id_menu (id_menu, id_node_menu)
+);
+
+#
+# Contenu de la table 'airwick_menu'
+#
+
+INSERT INTO airwick_menu VALUES ( '1', '0', 'Menu 1', '', '10', '10', '');
+INSERT INTO airwick_menu VALUES ( '2', '0', 'Menu 2', 'lien_menu2.html', '111', '10', 'fenêtre 2');
+INSERT INTO airwick_menu VALUES ( '3', '0', 'Menu 3', '', '212', '10', NULL);
+INSERT INTO airwick_menu VALUES ( '4', '1', 'Menu 1.1', 'lien_menu1.1.html', '10', '31', 'fenêtre 1.1');
+INSERT INTO airwick_menu VALUES ( '5', '1', 'Menu 1.2', '', '10', '52', NULL);
+INSERT INTO airwick_menu VALUES ( '6', '1', 'Menu 1.3', 'lien_menu1.3.html', '10', '73', NULL);
+INSERT INTO airwick_menu VALUES ( '7', '3', 'Menu 3.1', 'lien_menu3.1.html', '212', '31', NULL);
+INSERT INTO airwick_menu VALUES ( '8', '3', 'Menu 3.2', 'lien_menu3.2.html', '212', '52', NULL);
+INSERT INTO airwick_menu VALUES ( '9', '5', 'Menu 1.2.1', 'lien_menu1.2.1.html', '161', '52', NULL);
+INSERT INTO airwick_menu VALUES ( '10', '5', 'Menu 1.2.2', '', '161', '73', NULL);
+INSERT INTO airwick_menu VALUES ( '11', '10', 'Menu 1.2.2.1', 'lien_menu1.2.2.1.html', '312', '73', NULL);
+INSERT INTO airwick_menu VALUES ( '12', '10', 'Menu 1.2.2.2', 'lien_menu1.2.2.2.html', '312', '94', 'fenêtre 1.2.2.2');
+INSERT INTO airwick_menu VALUES ( '13', '4', 'Menu 1.1.1', '', '161', '31', '');
+INSERT INTO airwick_menu VALUES ( '14', '4', 'Menu 1.1.2', '', '161', '52', NULL);
+INSERT INTO airwick_menu VALUES ( '16', '4', 'Menu 1.1.3', '', '161', '73', '');
+

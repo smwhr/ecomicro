@@ -1,0 +1,5 @@
+#
+# Script SQL à executer pour mettre à jour votre table
+#
+
+ALTER TABLE airwick_menu ADD cible_menu TEXT ;

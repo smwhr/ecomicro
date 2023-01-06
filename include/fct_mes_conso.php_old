@@ -1,0 +1,31 @@
+<?php
+  // Envoi du message : Consommer
+
+// $fct_mes_conso_type
+// $fct_mes_conso_nom                  (fct_mes_resp_type = C, D)
+// $fct_mes_conso_quantite                  (fct_mes_resp_type = C, D)
+// $fct_mes_conso_unite                    (fct_mes_resp_type = C, D)
+// $fct_mes_conso_emaileco 
+
+  $email = $fct_mes_conso_emaileco . "@googlegroups.com";
+
+  $sujet = "EcoMicro - Consommation : ";
+  $sujet .= $fct_mes_conso_nom;
+
+    $corps = "L'entreprise ";
+    $corps .= $fct_mes_conso_nom;
+    $corps .= " vient de consommer : ";
+    $corps .= $fct_mes_conso_quantite;
+    $corps .= " ";
+    $corps .= $fct_mes_conso_unite;
+    $corps .= ".";
+
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+?>

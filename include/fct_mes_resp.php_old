@@ -1,0 +1,141 @@
+<?php
+  // Envoi du message : Responsable
+
+// $fct_mes_resp_type
+// $fct_mes_resp_ncpte                  (fct_mes_resp_type = C, D)
+// $fct_mes_resp_montant                  (fct_mes_resp_type = C, D)
+// $fct_mes_resp_devise                    (fct_mes_resp_type = C, D)
+// $fct_mes_resp_pays                       (fct_mes_resp_type = T, O, F, TAXE)
+// $fct_mes_resp_taux                    (fct_mes_resp_type = T, TAXE)
+// $fct_mes_resp_typetaxe                    (fct_mes_resp_type = TAXE)
+// $fct_mes_resp_eco                    (fct_mes_resp_type = O, F)
+// $fct_mes_resp_email                    (fct_mes_resp_type = E)
+
+  $email = $fct_mes_resp_emaileco . "@googlegroups.com";
+
+  $sujet = "EcoMicro - Responsable : ";
+  if ($fct_mes_resp_type == 'C')       // Cr�dit responsable
+  {
+    $sujet .= "Cr�dit d'un compte";
+
+    $corps = "Le responsable vient de cr�diter le compte : ";
+    $corps .= $fct_mes_resp_ncpte;
+    $corps .= ", de la somme de : ";
+    $corps .= $fct_mes_resp_montant;
+    $corps .= " ";
+    $corps .= $fct_mes_resp_devise;
+    $corps .= ".";
+
+  }
+  else if ($fct_mes_resp_type == 'D')       // D�bit responsable
+  {
+    $sujet .= "D�bit d'un compte";
+
+    $corps = "Le responsable vient de d�biter le compte : ";
+    $corps .= $fct_mes_resp_ncpte;
+    $corps .= ", de la somme de : ";
+    $corps .= $fct_mes_resp_montant;
+    $corps .= " ";
+    $corps .= $fct_mes_resp_devise;
+    $corps .= ".";
+  }
+  else if ($fct_mes_resp_type == 'T')       // Taux de change
+  {
+    $sujet .= "D�finission d'un taux de change";
+
+    $corps = "Le responsable vient de d�finir avec : ";
+    $corps .= $fct_mes_resp_pays;
+    $corps .= ", un Taux de change de : ";
+    $corps .= $fct_mes_resp_taux;
+    $corps .= ".";
+  }
+  else if ($fct_mes_resp_type == 'O')       // Ouverture relations diplomatiques
+  {
+    $sujet .= "Ouverture Relations";
+
+    $corps = "Le responsable vient d'ouvrir avec : ";
+    $corps .= $fct_mes_resp_pays;
+    $corps .= ", des relations ";
+
+    if ($fct_mes_resp_eco == '1')
+      $corps .= "diplomatiques";
+    else
+      $corps .= "�conomiques";
+    $corps .= ".";
+  }
+  else if ($fct_mes_resp_type == 'F')       // Fermeture relations diplomatiques
+  {
+    $sujet .= "Ouverture Relations";
+
+    $corps = "Le responsable vient de fermer avec : ";
+    $corps .= $fct_mes_resp_pays;
+    $corps .= ", les relations ";
+
+    if ($fct_mes_resp_eco == '1')
+      $corps .= "diplomatiques";
+    else
+      $corps .= "�conomiques";
+    $corps .= ".";
+  }
+  else if ($fct_mes_resp_type == 'E')       // Modification Email
+  {
+    $email = $fct_mes_resp_email_old . "@googlegroups.com";
+
+    $sujet .= "ML �co";
+
+    $corps = "Le responsable vient de modifier l'adresse de la ML �co pour : ";
+    $corps .= $fct_mes_resp_email_new;
+    $corps .= ".";
+  }
+  else if ($fct_mes_resp_type == 'TAXE')       // Modification Taxe
+  {
+    $sujet .= "TAXE";
+
+    $corps = "Le responsable vient de positionner la taxe : ";
+    $corps .= $fct_mes_resp_typetaxe;
+    if ($fct_mes_resp_pays > '')
+    {
+      $corps .= " ";
+      $corps .= "avec le pays : ";
+      $corps .= $fct_mes_resp_pays;
+    }
+      $corps .= " ";
+      $corps .= "� un taux de : ";
+      $corps .= $fct_mes_resp_taux;
+      $corps .= " ";
+      $corps .= "%.";
+  }
+
+
+
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+  $corps .= "\n\n";
+//  $corps .= $fct_mes_resp_type;
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+
+  if ($fct_mes_resp_type == 'E')       // Modification ML �co
+  {
+    $email = $fct_mes_resp_email_new . "@googlegroups.com";
+
+    $corps = "L'ancienne adresse de la ML �co �tait : ";
+    $corps .= $fct_mes_resp_email_old;
+    $corps .= ".";
+
+    $corps .= "\n\n";
+    $corps .= "EcoMicro\n";
+    $corps .= "http://micromonde.ecomicro.net \n";
+    $corps .= "\n\n";
+//    $corps .= $fct_mes_resp_type;
+
+    $adr_origine = "From:ecomicro@lazag.com";
+
+    mail($email,$sujet,$corps,$adr_origine);
+  }
+
+?>

@@ -1,0 +1,637 @@
+<html>
+<head><title>Ecran EcoMicro</title>
+
+<?php
+  include("include/style.php");
+echo "<style>";
+  echo "a {font-family:'Georgia'; COLOR:green; TEXT-DECORATION: underline }";
+  echo "a:hover {font-family:'Georgia'; COLOR:blue; TEXT-DECORATION: underline }";
+echo "</style>";
+?>
+
+
+
+</head>
+<body>
+<?php
+        include("menu/airwick_menu.php") ;
+?>
+
+<br>
+<br>
+
+<table>
+<tr>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width='200' valign=top class="texte3">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+</td>
+<td width='600' valign=top class='texte3b'>
+  <br>
+  <center>
+  <b><FONT size=4>Syst�me �conomique</FONT></b>
+  </center>
+
+  <br>
+  <br>
+
+  Le syst�me �conomique d'<b>EcoMicro</b> se base sur le syst�me Scheinwald en vigueur dans plusieurs pays du micromonde francophone.
+  Le texte ci dessous reprend en l'adaptant l'une des mises en oeuvre, celle de la <a href="http://nationprya.free.fr">R�publique de Prya</a>.
+
+  <br>
+  <br>
+
+  <b>SECTEURS D'ACTIVITE</b>
+  <br>
+  <br>
+
+&nbsp;&nbsp;- Le secteur primaire
+  <br>
+&nbsp;&nbsp;- Le secteur secondaire
+  <br>
+&nbsp;&nbsp;- Le secteur tertiaire
+  <br>
+&nbsp;&nbsp;- Les provinces et organismes
+  <br>
+
+
+  <br>
+  <br>
+  <b>SECTEUR PRIMAIRE</b>
+  <br>
+  <br>
+Le secteur primaire regroupe les industries qui exploitent les ressources naturelles.
+  <br>
+Ces ressources sont actuellement :
+  <br>
+  <br>
+&nbsp;&nbsp;- Produits alimentaires (PA) : agriculture, p�che...
+  <br>
+&nbsp;&nbsp;- Mati�re premi�res (MP) : minerais, bois...
+  <br>
+&nbsp;&nbsp;- Points d'�nergie (PE) : �lectricit�, carburant...
+  <br>
+  <br>
+Les ressources naturelles produites dans un pays sont limit�es � un <b>total mensuel de 50 unit�s x nombre de citoyens actifs</b> et r�parties entre les soci�t�s du primaire comme leur capacit� de production du mois. Celle ci ne peut d�passer la capacit� propre � l'entreprise.
+  <br>
+  <br>
+Si la capacit� de production totale pour le mois des entreprises du secteur primaire exc�de la valeur autoris�e, la capacit� de production de toutes les entreprises du secteur primaire pour le mois est r�duite de mani�re � ce que la production totale ne d�passe pas la limite.
+  <br>
+Cette capacite est fix�e lors de la permi�re connexion du mois en cours.
+  <br>
+(Cf. <a href="">Les capacit�s de production</a>)
+  <br>
+  <br>
+Ces ressources sont produites sur action du dirigeant de l'entreprise selon des <a =hre="#">r�gles de production</a>.
+  <br>
+La production non effectu�e durant le mois est perdue.
+  <br>
+  <br>
+Les ressources du secteur primaire peuvent �tre :
+  <br>
+  <br>
+&nbsp;&nbsp;- Consomm�es (ex: PE comme carburant)
+  <br>
+&nbsp;&nbsp;- Utilis�es par l'industrie pour fabriquer des biens 
+  <br>
+&nbsp;&nbsp;- Utilis�es comme co�t de production dans la cr�ation de produits finis
+  <br>
+  <br>
+  <br>
+  <b>SECTEUR SECONDAIRE</b>
+  <br>
+  <br>
+
+Les entreprises du secteur secondaires sont des usines qui transforment des mati�res premi�res selon des <a href="#">r�gles de production</a>.
+  <br>
+  <br>
+La quantit� de mati�res qu'une entreprise peut transformer dans le mois est limit� � sa capacit� de production fix�e lors de sa cr�ation et qu'il est possible de faire �voluer.
+  <br>
+(Cf. <a href="">Les capacit�s de production</a>)
+  <br>
+  <br>
+Les mati�res cr��es � l'issue de ces transformations peuvent �tre :
+  <br>
+  <br>
+&nbsp;&nbsp;- R�utilis�es en tant que ressources dans de nouvelles transformations
+  <br>
+&nbsp;&nbsp;- Consomm�es
+  <br>
+&nbsp;&nbsp;- Utilis�es comme co�t de production dans la cr�ation de produits finis
+  <br>
+  <br>
+  <br>
+<b>SECTEUR TERTIAIRE</b>
+  <br>
+  <br>
+Le secteur tertiaire est compos� des entreprises de services et des associations.
+  <br>
+Les entreprises de services peuvent fournir des services r�els comme par exemple la cr�ation d'un site web ou des services virtuels comme un s�jour d'une semaine dans un h�tel au bord de la mer.
+  <br>
+  <br>
+  <br>
+  <SMALL>La suite est non impl�ment�e, mais � l'�tude</SMALL>
+Pour simuler les services virtuels on utilise des points nomm�s NV (pour Niveau de Vie).
+  <br>
+  <br>
+A l'instar des produits avec leur co�t de production, les services s'�valuent en NV.
+  <br>
+Chaque prestation de service rendue correspond � un certain nombre de NV fix� par l'entreprise.
+  <br>
+  <br>
+Une entreprise de services peut vendre chaque mois un montant de NV maximum �gal � sa capacit� de production.
+  <br>
+  <br>
+Les NV accumul�s par les acheteurs de services ne peuvent pas �tre stock�s, ils sont valables uniquement durant le mois d'achat.
+  <br>
+Ils sont utilis�s pour d�finir le niveau de vie des citoyens.
+  <br>
+  <br>
+  <br>
+<b>PROVINCES ET ORGANISME</b>
+  <br>
+  <br>
+Elles sont assimil�es � des entreprises, leur type sp�cifique permettant les distinguer.
+  <br>
+  <br>
+  <br>
+<b>BUSINESS ET ECONOMIE CITOYENNE</b>
+  <br>
+  <br>
+  <br>
+Les <a href="">r�gles de production</a> cr�ent un march� quasiment autosuffisant, chaque entreprise produisant les ressources n�cessaire aux autres. Les productions et ressources sont appel�s : Stock. Les unit�s de stock ne peuvent �tre poss�d�es que par des entreprises ou assimil�.
+  <br>
+Ceci est ce que nous appelons la partie Business d'EcoMicro.
+  <br>
+  <br>
+Cette partie Business n'offre qu'une diversit� de produits limit�e, totalement insuffisante pour une nation virtuelle.
+Chaque entreprise peut donc mettre en vente les Produits de son choix (en accord et en coh�rence avec sa nation). Ces Produits peuvent �tre achet�s par tous (entreprises, citoyens,...). Ils apparaisent une fois acquis dans la section 'Vos Possessions' ou 'Possessions g�r�es', et 'Produit en vente' avant.
+  <br>
+Ceci est ce que nous appelons la partie Economie citoyenne.
+  <br>
+  <br>
+Par exemple un constructeur automobile, fabriquant des P V�hicule pour la partie Business peut tr�s bien fabriquer une voiture de sport ou une diligence. En revanche, il paraittra incoh�rent qu'il fabrique des immeubles.
+  <br>
+  <br>
+Il existe des types d'entreprises du secondaire dont la production n'est pas une ressource pour les autres entreprises.
+Ces soci�t�s fabriquent des unit�s un peu sp�cifique : les Points de Productions (PP).
+Ces unit�s sont utilis�s pour d�finir le Co�t de Production de la plus part des Produits. En fait des Produits sans rapport direct avec les autres unit�s de Stock.
+  <br>
+Ces types d'entreprise ne sont pas fig�s mais s'appliquent � l'ensemble des pays membres, c'est pourquoi leur cr�ation est de la responsabilit� d'EcoMicro. Il suffit de faire une demande.
+  <br>
+  <br>
+Si l'on reprend l'exemple pr�c�dent, les immeubles sont construits par des entreprises de BTP produisant des PP.
+  <br>
+  <br>
+  <br>
+<b>COUT DE PRODUCTION</b>
+  <br>
+  <br>
+Le Co�t de Production d'un Produit en Economie Citoyenne est libre et propre � chaque pays.
+Cependant pour que les �changes soient compatibles il est n�cessaire que les nations optent pour une r�gle commune.
+<br>
+<br>
+Les r�gles suivantes sont propos�es. Elles se basent toutes sur une m�me formule d�terminant le nombre d'unit� n�cessaire. La formule est celle ci : <b>racine carr�e du centi�me du prix en euros</b> dans le monde r�el (arrondi � l'entier sup�rieur) 
+<br>
+<br>
+Le co�t de production d'un v�hicule est �valu� en P V�hicule.
+  <br>
+10 000euro -> 10 P V�hicule -> 1 400 P� environ
+  <br>
+50 000euro -> 23 P V�hicule -> 3 220 P� environ
+  <br>
+100 000euro -> 32 P V�hicule -> 4 480 P� environ
+  <br>
+500 000euro -> 71 P V�hicule -> 9 940 P� environ
+  <br>
+1 000 000euro -> 100 P V�hicule -> 14 000 P� environ
+  <br>
+...
+  <br>
+  <br>
+Le co�t de production d'un outil (ou ustensile,...) est �valu� en P Outil.
+  <br>
+100euro -> 1 P Outil -> 100 P� environ
+  <br>
+500euro -> 3 P Outil -> 300 P� environ
+  <br>
+1 000euro -> 4 P Outil -> 400 P� environ
+  <br>
+5 000euro -> 8 P Outil -> 800 P� environ
+  <br>
+...
+  <br>
+  <br>
+Le co�t de production d'une machine (ou �lectromanager,...) est �valu� en P Machine.
+  <br>
+500euro -> 3 P Machine -> 360 P� environ
+  <br>
+1 000euro -> 4 P Machine -> 480 P� environ
+  <br>
+5 000euro -> 8 P Machine -> 960 P� environ
+  <br>
+10 000euro -> 10 P Machine -> 1 200 P� environ
+  <br>
+...
+  <br>
+  <br>
+Le co�t de production d'un Produit est �valu� en PP.
+  <br>
+100euro -> 1 PP -> 190 P� environ
+  <br>
+500euro -> 3 PP -> 570 P� environ
+  <br>
+1 000euro -> 4 PP -> 760 P� environ
+  <br>
+5 000euro -> 8 PP -> 1 520 P� environ
+  <br>
+10 000euro -> 10 PP -> 1 900 P� environ
+  <br>
+50 000euro -> 23 PP -> 4 370 P� environ
+  <br>
+100 000euro -> 32 PP -> 6 080 P� environ
+  <br>
+500 000euro -> 71 PP -> 13 490 P� environ
+  <br>
+1 000 000euro -> 100 PP -> 19 000 P� environ
+  <br>
+...
+  <br>
+  <br>
+  <br>
+<b>NIVEAU DE VIE</b>
+  <br>
+  <SMALL>Non impl�ment�, � l'�tude</SMALL>
+  <br>
+  <br>
+Le niveau de vie d'un citoyen est calcul� en additionnant la valeur en Co�t de Production de tous les biens qu'il poss�de � la valeur en NV de tous les services qu'il a achet� ou qu'on lui a offert pendant le mois �coul�.
+  <br>
+  <br>
+Le niveau de vie des citoyens est calcul� chaque mois et un classement est publi�.
+
+  <br>
+  <br>
+  <br>
+
+<b>EMPLOI</b>
+  <br>
+  <br>
+Seuls les citoyens du pays consid�r� peuvent diriger une entit� �conomique.
+  <br>
+Le salaire moyen conseill� est de 800 P�.
+  <br>
+  <br>
+  <SMALL>la gestion des "r�sidents" est � l'�tude</SMALL>
+
+  <br>
+  <br>
+  <br>
+
+<b>BESOIN DES CITOYENS</b>
+  <br>
+  <br>
+L'approvisionnement alimentaire et �nerg�tique des citoyens est assur� par les �tats.
+  <br>
+  <br>
+Chaque �tat doit consommer mensuellement :
+  <br>
+&nbsp;&nbsp;- 10 PAL par citoyen actif
+  <br>
+&nbsp;&nbsp;- 10 PE par citoyen actif
+  <br>
+  <br>
+Pour ce faire le responsable affecte ces besoins � des entreprises, provinces ou organismes en diminuant leur stock en fonction des lois nationales.
+
+  <br>
+  <br>
+  <br>
+
+<b>POLLUTION ET DECHETS</b>
+  <br>
+  <br>
+
+Les habitants, les v�hicules et les entreprises produisent des d�chets.
+  <br>
+L'unit� �conomique pour d�signer les d�chets est le PDt (Point D�chet).
+  <br>
+  <br>
+&nbsp;&nbsp;- Un citoyen produit 1 PDt par mois,
+  <br>
+&nbsp;&nbsp;- Une voiture produit 1 PDt par mois,
+  <br>
+&nbsp;&nbsp;- Un bateau � moteur produit 2 PDt par mois,
+  <br>
+&nbsp;&nbsp;- Un a�ronef � moteur produit 3 PDt mois,
+  <br>
+&nbsp;&nbsp;- Une industrie du secteur primaire ou secondaire produit 5 PDt par mois,
+  <br>
+&nbsp;&nbsp;- Une entreprise du secteur tertiaire produit 1 PDt par mois.
+  <br>
+  <br>
+Les d�chets doivent �tre trait�s par des entreprises sp�cialis�es dans le retraitement.
+  <br>
+  <br>
+La quantit� de d�chets non trait�s est prise en compte dans l'�tablissement du niveau de l'�tat.
+Tous les citoyens d'un �tat insalubre voient leur niveau de vie baisser tant que cette situation perdure.
+  <br>
+  <br>
+Les d�chets sont la base de production d'�nergie.
+
+  <br>
+  <br>
+  <br>
+
+</td>
+<td width='200' valign=top class="texte3">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+</td></tr>
+</table>
+
+<br>
+
+
+</body>
+</html>

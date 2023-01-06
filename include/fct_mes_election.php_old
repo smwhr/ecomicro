@@ -1,0 +1,29 @@
+<?php
+  // Envoi du message : Responsable
+
+// $fct_mes_resp_type
+// $fct_mes_election_nom_elec
+
+  $email = $fct_mes_election_emaileco . "@googlegroups.com";
+
+  $sujet = "EcoMicro - Election Responsable";
+
+  // Message
+
+    $corps = "L'�lection du responsable vient d'�tre lanc� par  ";
+    $corps .= $fct_mes_election_nom_elec;
+    $corps .= ". Rendez vous pendant 7 jours au niveau du d�tail de votre nation pour voter.";
+
+
+  $corps .= "\n\n";
+  $corps .= "EcoMicro\n";
+  $corps .= "http://micromonde.ecomicro.net \n";
+  $corps .= "\n\n";
+//  $corps .= $fct_mes_election_type;
+
+  $adr_origine = "From:ecomicro@lazag.com";
+
+  mail($email,$sujet,$corps,$adr_origine);
+
+
+?>

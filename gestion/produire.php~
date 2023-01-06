@@ -1,0 +1,240 @@
+<?php
+
+session_start();
+if (!$_SESSION['perso_iduser']){
+    die("Votre session est HS...");
+}
+
+?>
+
+<html>
+<head>
+<title> Produire </title>
+<head>
+<body>
+
+<?php
+
+  include("../include/config.php");
+
+  $facteur = addslashes(trim($_POST['facteur']));
+  $prodfini = addslashes(trim($_POST['prodfini']));
+  $type = addslashes(trim($_POST['type']));
+  $identre = addslashes(trim($_POST['identre']));
+  $nbresA = addslashes(trim($_POST['nbresA']));
+  $nbmatA = addslashes(trim($_POST['nbmatA']));
+
+  @mysql_connect($host,$user,$pass) or die("<br>0- Impossible de se connecter � la base de donn�es -- "); // Le @ ordonne a php de ne pas afficher de message d'erreur
+  @mysqli_select_db($conn, $bdd) or die("<br>0- Impossible de se connecter � la base de donn�es -- ");
+
+  $idjoueur = $_SESSION['perso_iduser'];
+
+  // CTRL Autorisation
+  if ($_SESSION['perso_droituser'] != '999')
+  {
+	  $paysjoueur = $_SESSION['perso_idpays'];
+	  $autojoueur = substr($_SESSION['perso_droituser'],1,1);
+	  
+	  $sql = "SELECT identreprise FROM eco_entreprise, eco_pays WHERE eco_entreprise.identreprise = '$identre' ";
+	  $sql .= "AND (eco_entreprise.iduser = '$idjoueur' ";
+	  $sql .= "OR (eco_entreprise.idpays = '$paysjoueur' AND '$autojoueur' > '4')); ";
+	  $res = @mysqli_query($conn, $sql)or die("<br> PB de v�rification1, d�sol� !!!");
+	  $num = @mysqli_num_rows($res) or die("<br> PB de v�rification1, d�sol� !!!");
+  }
+
+  $sql = "SELECT eco_entreprise.typeentreprise,eco_typeentreprise.typeequi,eco_entreprise.capacite FROM eco_entreprise, eco_typeentreprise ";
+  $sql .= "WHERE identreprise = '$identre' AND eco_entreprise.typeentreprise = eco_typeentreprise.typeentreprise;";
+  $res = @mysqli_query($conn, $sql)or die("<br> PB dans la requ�te recherche entreprise");
+  $num = @mysqli_num_rows($res) or die("<br> L'entreprise n'�xiste pas !!!");
+  $produit = mysqli_fetch_array($res);
+
+  $typeentreprise = $produit['typeentreprise'];
+  $typeequi = $produit['typeequi'];
+  $capacite = $produit['capacite'];
+
+  $sql = "SELECT typeequi FROM eco_typeentreprise ";
+  $sql .= "WHERE typeentreprise = '$type';";
+  $res = @mysqli_query($conn, $sql)or die("<br> PB dans la requ�te recherche type");
+  $num = @mysqli_num_rows($res) or die("<br> Le type d'entreprise n'�xiste pas !!!");
+  $produit = mysqli_fetch_array($res);
+
+  $prod_typeequi = $produit['typeequi'];
+
+  if (($type != $typeequi) && ($type != $typeentreprise) && ($prod_typeequie != $typeequi) && ($prod_typeequie != $typeentreprise))
+	die("<br> Le type d'entreprise ne correspond pas.");
+
+  // Recherche devise, nb et cout de l'historique du mois
+  $tt=time();
+  $mois=date("m",$tt);
+
+  $sql = "SELECT devise FROM eco_banque WHERE idtitulaire = '$identre' ORDER BY idcompte DESC;";
+  $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te de recherche compte (produire) !!!");
+  $num = @mysqli_num_rows($res) or die("Pas de compte (produire) !!!");
+  $produit = mysqli_fetch_array($res);
+  $devise = $produit['devise'];
+
+  $sql = "SELECT nb,cout,datemaj FROM eco_histo WHERE identreprise = '$identre' AND mois = '$mois' AND idunite = '$prodfini' AND action = '2';";
+  $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te de recherche de histo (produire) !!!");
+  $num = @mysqli_num_rows($res);
+  if ($num > 0)
+  {
+      $produit = mysqli_fetch_array($res);
+
+      $nb = $produit['nb'];
+      $cout = $produit['cout'];
+      $date = $produit['datemaj'];
+      if (substr($date,3,2) != date("y",$tt))
+      {
+      	$nb = 0;
+        $cout = 0;
+      }
+  }
+  else
+  {
+      $sql = "INSERT INTO eco_histo (idhisto,identreprise,mois,idunite,action,nb,cout,devise,qualite,datemaj) VALUES (NULL,'$identre','$mois','$prodfini','2','0','0','$devise','0',NOW())";
+      $res = mysqli_query($conn, $sql) or die("Erreur dans la requ�te ins1 histo (produire) !!!");
+
+      $nb = 0;
+      $cout = 0;
+  }
+
+  // ressource
+  if ($nbresA > 0)
+  {
+    $sql = "SELECT typeproduire,idres,nbres FROM eco_produire WHERE typeentreprise = '$type' AND idproduitfini = '$prodfini' AND typeproduire = '2';";
+    $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te de recherche de ressource (produire) !!!");
+    $num = @mysqli_num_rows($res) or die("Pas de r�gle de production (res), bizarre... (produire) !!!");
+
+    $prix_res = 0;
+    $nb_res = 0;
+
+    while ($produit = mysqli_fetch_array($res))
+    {
+
+        $typeproduire = $produit['typeproduire'];
+        $idres = $produit['idres'];
+        $nbres = $produit['nbres'];
+
+        $sql1 = "SELECT quantite,prixrevient,devise,qualite FROM eco_stock WHERE identreprise = '$identre' AND idunite = '$idres';";
+        $res1 = @mysqli_query($conn, $sql1) or die("Erreur dans la requ�te de recherche ressource (produire) !!!");
+        $num1 = @mysqli_num_rows($res1) or die("Pas de ressource... (produire) !!!");
+
+        $produit1 = mysqli_fetch_array($res1);
+        $quantite1 = $produit1['quantite'];
+        $prixrevient1 = $produit1['prixrevient'];
+        $devise1 = $produit1['devise'];
+        $qualite1 = $produit1['qualite'];
+
+        $prix_res = (($prix_res * $nb_res) + ($prixrevient1 * ($nbres * $facteur))) / ($nb_res + ($nbres * $facteur));
+        $nb_res = $nb_res + ($nbres * $facteur);
+
+        if ($quantite1 < ($nbres * $facteur))
+          die ("Pad assez de ressource...");
+
+        $new_quantite = $quantite1 - ($nbres * $facteur);
+
+        $sql1 = "UPDATE eco_stock SET quantite = '$new_quantite', datemaj = NOW() WHERE identreprise = '$identre' AND idunite = '$idres';";
+        $res1 = @mysqli_query($conn, $sql1)or die("Erreur dans la requ�te de maj ressource (produire) !!!");
+    }
+  }
+
+  // materiaux
+  if ($nbmatA > 0)
+  {
+    $sql = "SELECT typeproduire,idres,nbres FROM eco_produire WHERE typeentreprise = '$type' AND idproduitfini = '$prodfini' AND typeproduire = '3';";
+    $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te de recherche de mat�riaux (produire) !!!");
+    $num = @mysqli_num_rows($res) or die("Pas de r�gle de production (mat), bizarre... (produire) !!!");
+
+    $prix_mat = 0;
+    $nb_mat = 0;
+
+    while ($produit = mysqli_fetch_array($res))
+    {
+
+        $typeproduire = $produit['typeproduire'];
+        $idres = $produit['idres'];
+        $nbres = $produit['nbres'];
+
+        $sql1 = "SELECT quantite,prixrevient,devise,qualite FROM eco_stock WHERE identreprise = '$identre' AND idunite = '$idres';";
+        $res1 = @mysqli_query($conn, $sql1) or die("Erreur dans la requ�te de recherche mat�riaux 2 (produire) !!!");
+        $num1 = @mysqli_num_rows($res1) or die("Pas de mat�riaux... (produire) !!!");
+
+        $produit1 = mysqli_fetch_array($res1);
+        $quantite1 = $produit1['quantite'];
+        $prixrevient1 = $produit1['prixrevient'];
+        $devise1 = $produit1['devise'];
+        $qualite1 = $produit1['qualite'];
+
+        $prix_mat = (($prix_mat * $nb_res) + ($prixrevient1 * ($nbres * $facteur))) / ($nb_mat + ($nbres * $facteur));
+        $nb_mat = $nb_mat + ($nbres * $facteur);
+
+        if ($quantite1 < ($nbres * $facteur))
+          die ("Pad assez de mat�riaux...");
+
+        $new_quantite = $quantite1 - ($nbres * $facteur);
+
+        $sql1 = "UPDATE eco_stock SET quantite = '$new_quantite', datemaj = NOW() WHERE identreprise = '$identre' AND idunite = '$idres';";
+        $res1 = @mysqli_query($conn, $sql1)or die("Erreur dans la requ�te de maj mat�riaux (produire) !!!");
+    }
+  }
+
+  // productions
+  $sql = "SELECT typeproduire,idres,nbres FROM eco_produire WHERE typeentreprise = '$type' AND idproduitfini = '$prodfini' AND typeproduire = '1';";
+  $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te de recherche de produire (produire) !!!");
+  $num = @mysqli_num_rows($res) or die("Pas de r�gle de production (prod), bizarre... (produire) !!!");
+
+  $prix_prod = 0;
+
+  while ($produit = mysqli_fetch_array($res))
+  {
+
+      $typeproduire = $produit['typeproduire'];
+      $idres = $produit['idres'];
+      $nbres = $produit['nbres'];
+
+      $sql1 = "SELECT quantite,prixrevient,devise,qualite FROM eco_stock WHERE identreprise = '$identre' AND idunite = '$idres';";
+      $res1 = @mysqli_query($conn, $sql1) or die("Erreur dans la requ�te de recherche ressource (produire) !!!");
+      $num1 = @mysqli_num_rows($res1);
+      if ($num1 == 1)
+      {
+          $produit1 = mysqli_fetch_array($res1);
+          $quantite1 = $produit1['quantite'];
+          $prixrevient1 = $produit1['prixrevient'];
+          $devise1 = $produit1['devise'];
+          $qualite1 = $produit1['qualite'];
+
+          $prix_prod = (($prix_res * ($nbres * $facteur)) + ($prixrevient1 * $quantite1)) / ($quantite1 + ($nbres * $facteur));
+
+          $new_quantite = $quantite1 + ($nbres * $facteur);
+
+          $sql1 = "UPDATE eco_stock SET quantite = '$new_quantite', prixrevient = $prix_prod, datemaj = NOW() WHERE identreprise = '$identre' AND idunite = '$idres';";
+          $res1 = @mysqli_query($conn, $sql1)or die("Erreur dans la requ�te de maj ressource (produire) !!!");
+      }
+      else
+      {
+          $prix_prod = (($prix_res * ($nbres * $facteur)) + ($prixrevient1 * $quantite1)) / ($quantite1 + ($nbres * $facteur));
+
+          $new_quantite = ($nbres * $facteur);
+
+          $sql = "INSERT INTO eco_stock (identreprise,idunite,quantite,prixrevient,devise,qualite,datemaj) VALUES ('$identre','$idres','$new_quantite','$prix_prod','$devise','0',NOW())";
+          $res = mysqli_query($conn, $sql) or die("Erreur dans la requ�te ins stock (produire) !!!");
+      }
+
+      if ($idres == $prodfini)
+      {
+          $cout = (($nb * $cout) + ($prix_prod * $new_quantite)) / ($new_quantite + $nb);
+          $nb = $nb + ($nbres * $facteur);
+      }
+  }
+
+  // l'historique
+  $sql = "UPDATE eco_histo SET nb = '$nb', cout = '$cout', datemaj = NOW() WHERE identreprise = '$identre' AND mois = '$mois' AND idunite = '$prodfini' AND action = '2';";
+  $res = @mysqli_query($conn, $sql)or die("Erreur dans la requ�te de maj de histo (produire) !!!");
+
+
+  echo "<script language=\"JavaScript\"> document.location.replace(\"../produire.php?entreprise=",$identre,"\");</script>";
+
+?>
+
+</body>
+</html>

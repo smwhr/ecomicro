@@ -1,0 +1,224 @@
+<html>
+<head><title>Pr�sentation EcoMicro</title>
+
+<?php
+  include("include/style.php");
+echo "<style>";
+  echo "a {font-family:'Georgia'; COLOR:black; TEXT-DECORATION: underline }";
+  echo "a:hover {font-family:'Georgia'; COLOR:blue; TEXT-DECORATION: underline }";
+echo "</style>";
+?>
+
+
+
+</head>
+<body>
+<?php
+        include("menu/airwick_menu.php") ;
+?>
+
+<br>
+<br>
+
+<table>
+<tr>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width='200' valign=top class="texte3">
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/logo.gif" alt="">
+    </center>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='600' valign=top class='texte3b'>
+  <br>
+  <center>
+  <b><FONT size=4>Pr�sentation</FONT></b>
+  </center>
+
+  <br>
+  <br>
+
+  <b>EcoMicro</b> permet une gestion simplifi�e du domaine financier et �conomique d'une nation virtuelle.
+  Pour ce faire il centralise les fonctions d'<b>inventaire</b>, de <b>banque</b>, de <b>gestion de production</b> et de <b>gestion des relations �conomiques</b> entre les �tats membres.
+  <br>
+  Il offre la possibilit� � chaque �tat membre de d�terminer le <b>taux de change</b> de sa monnaie par rapport aux autres, ainsi qu'un niveau de <b>taxe par type de produit</b>.
+  Ainsi le jeu diplomatique-�conomique peut s'exprimer.
+  <br>
+  <br>
+  Afin de laisser la part belle aux �changes entre joueurs, le tarif des produits n'est pas d�finit et doit �tre n�goci� pr�alablement � chaque achat.
+  Suite � cette <b>n�gociation</b>, l'acheteur effectue une proposition qui doit �tre <b>valid�e par le vendeur</b> pour �tre r�alis�e.
+  <br>
+  <br>
+
+  <b>Acc�s et Droits</b>
+  <br>
+  L'acc�s s'effectue au niveau 'Citoyen'.
+  A partir de son acc�s chaque citoyen peut agir sur les donn�es qu'il g�re, <b>personnelles et professionnelles</b>, comme cr�er des comptes bancaires, mettre en vente un nouveau produit, effectuer un achat ou une transaction financi�re.
+  <br>
+  <br>
+  Chaque nation est g�r�e par un <b>responsable �conomique</b>.
+  Ce responsable a la possibilit� de modifier les param�tres de l'�tat, de cr�er des soci�t�s, d'ajouter des citoyens.
+  De plus il a la vision de l'ensemble des comptes bancaires.
+
+  <br>
+  <br>
+
+  <b>Le syst�me bancaire</b>
+  <br>
+  Chaque utilisateur (citoyen enregistr�) ainsi que chaque entit� �conomique (entreprise, province) disposent d'un ou plusieurs comptes bancaires.
+  <br>
+  <br>
+  Les <b>transactions financi�res</b> s'op�rent par simple choix des comptes Origine et Destinataire et la saisie du montant.
+  S'applique alors si n�cessaire le <b>taux de change</b> entre les deux devises, selon un processus d�termin� et commun expliqu� par ce <a href="schema_bancaire.php">sch�ma</a>.
+  <br>
+  L'achat de produits ou de stocks g�n�re des transactions qui suivent le m�me processus enrichi de la prise en compte de la taxe d�finie par le responsable de la nation acheteuse.
+  <br>
+  <br>
+  Une �valuation de la valeur financi�re des entreprises est effectu�e, elle s'apparente � la <b>Bourse</b>.
+
+  <br>
+  <br>
+
+  <b>La gestion de production</b>
+  <br>
+  Une <b>tr�s grande souplesse</b> a �t� impl�ment�e afin de laisser � chaque nation l'initaitive dans ce domaine et permettre l'utilisation de cet outil par un maximum de pays diff�rents.
+  La seule contrainte pour proposer un nouveau produit est de lui affecter une valeur et une mati�re, correspondant � son <b>co�t de production</b>.
+  Le produit est virtuel, seules sa valeur et sa mati�re importent.
+  <br>
+  Fabriquer un produit, revient � disposer de la quantit� de mati�re d�termin�e.
+  Pour ce faire il est possible d'acheter directement la mati�re ou de transformer d'autres mati�res selon des <b>r�gles de production</b>.
+  <br>
+  <br>
+  Chaque pays d�termine comme il l'entend le co�t de production des produits qu'il autorise � fabriquer.
+  EcoMicro ne contr�le pas la coh�rence de ce co�t, ni si le produit est autoris�, c'est au responsable �conomique de la nation de le faire.
+
+  <br>
+  <br>
+
+  Bien entendu, pour que des �changes entre nations soient �quitables, il est n�cessaire que les m�thodes de d�finition du co�t de production soient comptatibles.
+
+  <br>
+  <br>
+
+  <b>La gestion des relations �conomiques</b>
+  <br>
+  <b>EcoMicro</b> rassemble des nations aux r�gles �conomiques qui peuvent �tre tr�s vari�es et pas forc�ment comptatibles ou coh�rentes les une avec les autres.
+  Pour que ce choix ne soit pas p�nalisant, chaque pays peut cacher les donn�es d'un autre �tat (il devient comme invisible ou inexistant), ou simplement emp�cher les �changes commerciaux.
+  <br>
+  <br>
+  Certaines valeurs de param�trage, comme le taux de change, ont un impact tr�s important sur les transactions.
+  Afin de garantir la pertinence de ces param�tres, les modifications crutiales n�cessitent une validation de l'autre partie.
+
+  <br>
+  <br>
+
+</td>
+<td width='200' valign=top class="texte3">
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/valise_billets.gif" alt="">
+    </center>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    <center>
+    <img src="obj/logo.gif" alt="">
+    </center>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td></tr>
+</table>
+
+<br>
+
+
+</body>
+</html>

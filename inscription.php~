@@ -1,0 +1,84 @@
+<html>
+<head><title>EcoMicro - Inscription</title>
+
+<style>
+ .Texte3 { color:black; font-family:'Arial'; font-weight:bold; font-size:8pt; }
+ .Texte3a { color:black; font-family:'Georgia'; font-weight:bold; font-size:11pt; }
+ .Texte3b { color:black; font-family:'Georgia'; font-weight:bold; font-size:8pt; }
+</style>
+
+</head>
+<body>
+<?php
+        include("menu/airwick_menu.php") ;
+?>
+
+<br>
+<br>
+
+<table>
+<tr>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width='200' valign=center class='texte3'>
+<center>
+        <img src="obj/valise_billets.gif" alt="">
+</center>
+</td>
+<td width='600' valign=top class='texte3a'>
+Les crit�res et le formalisme d'int�gration de nouvelles nations virtuelles ne sont pour le moment pas d�finis.
+<ul>
+    <li>Pour une inscription veuillez <a href="mailto:ecomicro@googlegroups.com">nous envoyer un email</a>.
+    <br>&nbsp;
+    <li>Merci d'indiquer adresse du site et du forum/ML ainsi que la date cr�ation et le nombre de joueurs actifs.
+    <br>&nbsp;
+    <li>Il ne s'agit toujours pas pour le moment d'une version finalis�e, mais elle est toutefois op�rationnelle. L'ouverture se fera au compte goute et pas avant la fin d'ann�e.
+</ul>
+
+N'h�sitez pas � <a href="mailto:ecomicro@googlegroups.com">nous contacter</a> pour toute information compl�mentaire.
+
+<br>
+
+</td>
+<td width='200' valign=center>
+<center>
+        <img src="obj/valise_billets.gif" alt="">
+</center>
+</td></tr>
+</table>
+<br>
+<table>
+<tr>
+<td width='100%' valign=center class='texte3b'>
+
+<ul>
+    <li>La soci�t� virtuelle <a href="http://micromonde.lazag.com/nkweb">NKWeb</a> est situ�e � Kaora, <a href="http://nationprya.free.fr">Prya</A>. Son directeur est <a href="mailto:james_von_ellroy@yahoo.fr">James Von Ellroy</a>.
+</ul>
+</td></tr>
+</table>
+
+</body>
+</html>

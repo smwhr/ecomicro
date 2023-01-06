@@ -1,0 +1,185 @@
+<html>
+<head><title>EcoMicro</title>
+<?php
+        include("include/style.php") ;
+?>
+</head>
+<body>
+<?php
+        include("menu/airwick_menu.php") ;
+?>
+
+<br>
+<br>
+<table>
+<tr>
+<td width='50' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='100' valign=top class='texte3'>
+</td>
+<td width='200' class="texte3">
+    <CENTER><img src="obj/logo.gif" alt="logo"></CENTER>
+    &nbsp;&nbsp;&nbsp;NKWeb, Kaora 2005
+</td>
+<td width='50' valign=top class='texte3'>
+</td>
+</tr>
+</table>
+<br>
+<br>
+
+<table>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>Version :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'><b><FONT size='3'>0.4.a</FONT></b> - Premi�re utilisation (sept 2006)</td>
+
+      <td class='texte1a' width='100' align='right' valign='top'>Nouveaut�s :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>Envoi d'Email
+          <li>D�termination du responsable �conomique
+          <li>Contr�les de m�j
+      </td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>A venir :&nbsp;
+      <td class='texte2a' width='400' valign='top'>
+          <li>Finalisation pour plusieurs pays
+          <li>R�gles �conomiques
+          <li>Emission de titres / Gestion de la 'Bourse'
+          <li>Int�gration de l'immobilier
+      </td>
+      <td class='texte1a' width='100' align='right' valign='top'>En suspend :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>Gestion Administrative
+          <li>Ecrans de synth�se
+          <li>Gestion des transports
+          <li>Transactions et achats externes
+      </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<table>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>Version :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'><b><FONT size='3'>0.3.a</FONT></b> - Premi�re phase de test</td>
+
+      <td class='texte1a' width='100' align='right' valign='top'>Nouveaut�s :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>D�tail (citoyen, entreprise, �tat)
+          <li>Transformation de mati�re / Production
+          <li>Gestion des besoins
+          <li>Messagerie de validation
+          <li>Transactions et achats avec validation
+          <li>S�curisation des actions (autant que faire ce peut)
+          <li>Documentation !
+      </td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>A venir :&nbsp;
+      <td class='texte2a' width='400' valign='top'>
+          <li>Envoi d'Email
+          <li>D�termination du responsable �conomique
+          <li>Finalisation pour plusieurs pays
+          <li>Gestion Administrative
+      </td>
+      <td class='texte1a' width='100' align='right' valign='top'>En suspend :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>Emission de titres / Gestion de la 'Bourse'
+          <li>Int�gration de l'immobilier
+          <li>Ecrans de synth�se
+          <li>Gestion des transports
+          <li>Transactions et achats externes
+      </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<table>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>Version :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'><b><FONT size='3'>0.2.a</FONT></b> - Seconde �tape</td>
+
+      <td class='texte1a' width='100' align='right' valign='top'>Nouveaut�s :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>La Bourse
+          <li>Visualisation restrainte
+          <li>S�curisation des saisies
+          <li>Traitements de m�j
+          <li>Application des droits
+      </td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>A venir :&nbsp;
+      <td class='texte2a' width='400' valign='top'>
+          <li>D�tail d'un citoyen
+          <li>D�tail d'une entreprise
+          <li>Messagerie et Email
+          <li>Transactions et achats avec validation
+      </td>
+      <td class='texte1a' width='100' align='right' valign='top'>En suspend :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>Ecrans de synth�se
+          <li>R�gles �conomiques
+          <li>Transactions et achats externes
+      </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<table>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>Version :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'><b><FONT size='3'>0.1.a</FONT></b> - Premi�re pr�sentation</td>
+
+      <td class='texte1a' width='100' align='right' valign='top'>Nouveaut�s :&nbsp;</td>
+      <td class='texte2a' width='400'>Tout !!</td>
+  </tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr>
+      <td class='texte1a' width='100' align='right' valign='top'>A venir :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>La Bourse
+          <li>Visualisation restrainte
+          <li>S�curisation des saisies
+          <li>Traitements de m�j
+          <li>Application des droits
+          <li>R�gles �conomiques
+      </td>
+      <td class='texte1a' width='100' align='right' valign='top'>En suspend :&nbsp;</td>
+      <td class='texte2a' width='400' valign='top'>
+          <li>Ecrans de synth�se
+          <li>Messagerie et Email
+          <li>Transactions et achats avec validation
+          <li>Transactions et achats externes
+      </td>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<li>Lancement du projet : f�vrier 2005
+
+
+</body>
+</html>
