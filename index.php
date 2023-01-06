@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     include("include/config.php");
     $conn = mysqli_connect($host,$user,$pass) or die("Verif 9 - Impossible de se connecter");
     mysqli_select_db($conn, $bdd) or die("Verif 10 - Impossible de se connecter à la base de données");
