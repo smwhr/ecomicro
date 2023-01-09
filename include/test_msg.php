@@ -1,7 +1,8 @@
 <?php
 
-$email = "armara_eco@googlegroups.com";
+// $email = "armara_eco@googlegroups.com";
 //$email = "martin_dutois@yahoo.fr";
+$email = "julienzamor@gmail.com";
 
 $sujet = "Test msg via programmation";
 

@@ -74,10 +74,10 @@
     $adr_origine .= "\n";
     $adr_origine .='Content-Type: text/plain; charset="utf-8"'."\n";
     $corps = "[£££ECOMICRO£££]" . $corps;
-  	mail("prya-forum@micromonde.net",$sujet,$corps,$adr_origine);
+  	if( MAIL_ENABLED) mail("prya-forum@micromonde.net",$sujet,$corps,$adr_origine);
   } 
   else
-    mail($email,$sujet,$corps,$adr_origine);
+    if( MAIL_ENABLED) mail($email,$sujet,$corps,$adr_origine);
 
 
 

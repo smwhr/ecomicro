@@ -160,7 +160,7 @@ if ($num > 0){
 
         $adr_origine = "From:ecomicro@lazag.com";
 
-        mail($email,$sujet,$corps,$adr_origine);
+        if( MAIL_ENABLED) mail($email,$sujet,$corps,$adr_origine);
 
     }
 }

@@ -48,7 +48,7 @@
   $adr_origine = "From:martin_dutois@yahoo.fr";
 
 //  echo $corps;
-  mail($email,$sujet,$corps,$adr_origine);
+  if( MAIL_ENABLED) mail($email,$sujet,$corps,$adr_origine);
 ?>
 
   <br>
