@@ -16,9 +16,6 @@
     if (isset($_SESSION['perso_iduser'])) {
         $idjoueur = $_SESSION['perso_iduser'];
         $tmp = "new_detail_1_citoyen.php?citoyen=" . $idjoueur;
-        echo "ici";
-        echo $tmp;
-        die();
         die ("<script language='JavaScript'>document.location.replace('$tmp');</script>");
     }
     
